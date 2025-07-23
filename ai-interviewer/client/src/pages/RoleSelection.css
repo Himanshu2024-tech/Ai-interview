@@ -1,0 +1,91 @@
+.role-selection-container {
+  min-height: calc(100vh - 80px);
+  background-color: #f4f7f6;
+  padding: 2rem 1rem;
+}
+
+.role-selection-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.role-selection-content h1 {
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.role-selection-content p {
+  color: #666;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.roles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.role-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 2px solid transparent;
+}
+
+.role-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.role-card.selected {
+  border-color: #4a90e2;
+  background-color: #f8fbff;
+}
+
+.role-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.role-card h3 {
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.role-card p {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.start-interview-btn {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.start-interview-btn:hover:not(:disabled) {
+  background-color: #357abd;
+}
+
+.start-interview-btn:disabled {
+  background-color: #a0c3e8;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .roles-grid {
+    grid-template-columns: 1fr;
+  }
+}
